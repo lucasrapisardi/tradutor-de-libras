@@ -28,6 +28,7 @@
               "node_modules/ngx-toastr/toastr.css"
             ],
             "scripts": [
+              "src/assets/js/annyang.min.js"
             ]
           },
           "configurations": {

@@ -1,10 +1,9 @@
-<!-- <app-nav></app-nav>
-<div class="container"> -->
-  <!--<app-eventos></app-eventos>--> <!-- Faz referência ao "selector: 'app-eventos'" que está dentro do arquivo 'eventos.component.ts'. Ou seja, traz tudo que esta no arquivo eventos.component.ts .html e .css-->
-  <!-- <router-outlet></router-outlet>
-</div> -->
+<app-nav></app-nav>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
 
-<div *ngIf="voiceActiveSectionDisabled; else voicesection;">
+<!-- <div *ngIf="voiceActiveSectionDisabled; else voicesection;">
   <button type="button" (click)="startVoiceRecognition()">Record</button>
 </div>
 <ng-template #voicesection>
@@ -29,4 +28,4 @@
     <button (click)="closeVoiceRecognition()">Close</button>
     <button (click)="startVoiceRecognition()">Restart</button>
   </div>
-</ng-template>
+</ng-template> -->
