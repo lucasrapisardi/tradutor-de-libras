@@ -29,6 +29,7 @@ import localPt from '@angular/common/locales/pt';
 import { EntradaVozComponent } from './entrada-voz/entrada-voz.component';
 import { EntradaTextoComponent } from './entrada-texto/entrada-texto.component';
 import { EntradaVideoComponent } from './entrada-video/entrada-video.component';
+import { InicioComponent } from './inicio/inicio.component';
 
 registerLocaleData(localPt);
 
@@ -44,7 +45,8 @@ registerLocaleData(localPt);
     DateTimeFormatPipePipe,
     EntradaVozComponent,
     EntradaTextoComponent,
-    EntradaVideoComponent
+    EntradaVideoComponent,
+    InicioComponent
   ],
   imports: [
     BrowserModule,

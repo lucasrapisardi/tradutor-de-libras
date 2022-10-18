@@ -1,4 +1,12 @@
-<div #video id="webcam-container"></div>
-<ul>
-<li *ngFor="let item of predictions">{{item.className}} : {{item.probability}}</li>
-</ul>
+<div class="container">
+  <div class="video" #video id="webcam-container"></div>
+  <!-- <ul class="lista">
+    <li *ngFor="let item of predictions">
+      {{ item.className }} : {{ item.probability }}
+    </li>
+  </ul> -->
+  <div class="saida" *ngIf="textoReconhecido">
+    Texto Reconhecido:
+    <p class="texto">{{ textoReconhecido }}</p>
+  </div>
+</div>

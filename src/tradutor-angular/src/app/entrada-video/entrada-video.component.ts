@@ -18,6 +18,7 @@ export class EntradaVideoComponent implements OnInit {
   predictions;
   webcam;
   maxPredictions;
+  textoReconhecido: string = "";
   @ViewChild('video', { static: false }) video: ElementRef;
 
   ngOnInit() {
@@ -41,5 +42,15 @@ export class EntradaVideoComponent implements OnInit {
     this.webcam.update(); // update the webcam frame
     this.predictions = await this.model.predict(this.webcam.canvas, true);
     requestAnimationFrame(() => this.loop());
+
+    var arrayProbability = new Array();
+    this.predictions.forEach(element => {
+      arrayProbability.push(element.probability);
+    });
+    var maiorProbability = Math.max(...arrayProbability);
+    // var maiorProbability = Math.max.apply(null, arrayProbability);
+    var item = this.predictions.find(element =>
+      element.probability == maiorProbability);
+    this.textoReconhecido = item.className;
   }
 }
