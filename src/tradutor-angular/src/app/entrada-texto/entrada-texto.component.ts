@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EntradaTextoComponent implements OnInit {
   texto: string;
+  imgPath: string;
+  showImg = false;
+  cont: number = 0;
 
   constructor() {}
 
@@ -15,6 +18,10 @@ export class EntradaTextoComponent implements OnInit {
   reproduzirSom() {
     var synth = window.speechSynthesis;
     var toSpeak = new SpeechSynthesisUtterance(this.texto);
+
+    this.imgPath = 'assets/imagens-sinais/';
+    this.imgPath += this.texto + '.png';
+    this.showImg = true;
 
     synth.speak(toSpeak);
   }
