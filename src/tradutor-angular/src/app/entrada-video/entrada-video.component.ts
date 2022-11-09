@@ -14,6 +14,7 @@ import * as tmImage from '@teachablemachine/image';
 })
 export class EntradaVideoComponent implements OnInit {
   url = 'https://teachablemachine.withgoogle.com/models/inkU1DgEq/';
+  // url = 'https://teachablemachine.withgoogle.com/models/ZFXy1A5S9/';
   model;
   predictions;
   webcam;

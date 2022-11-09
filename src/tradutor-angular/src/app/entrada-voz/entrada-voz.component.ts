@@ -1,3 +1,4 @@
+import { ThrowStmt } from '@angular/compiler';
 import { Component, OnInit, NgZone } from '@angular/core';
 declare const annyang: any;
 
@@ -54,7 +55,9 @@ export class EntradaVozComponent implements OnInit {
       this.voiceText = queryText;
 
       if (this.cont == 0){
-        this.imgPath += (this.voiceText + ".png");
+        var text: string = this.voiceText.toString().toUpperCase();
+        text = text.includes('LETRA') ? text.substring(6) : text;
+        this.imgPath += (text + ".png");
         this.showImg = true;
       }
 

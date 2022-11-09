@@ -20,7 +20,7 @@ export class EntradaTextoComponent implements OnInit {
     var toSpeak = new SpeechSynthesisUtterance(this.texto);
 
     this.imgPath = 'assets/imagens-sinais/';
-    this.imgPath += this.texto + '.png';
+    this.imgPath += this.texto.toUpperCase() + '.png';
     this.showImg = true;
 
     synth.speak(toSpeak);
