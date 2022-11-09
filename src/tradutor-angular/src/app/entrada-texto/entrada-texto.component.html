@@ -1,0 +1,10 @@
+<div class="entrada-texto">
+  <div>
+    <label>Digite o texto:</label>
+    <input type="text" [(ngModel)]="texto" placeholder="" />
+    <button (click)="reproduzirSom()">Reproduzir Som</button>
+  </div>
+  <div>
+    <img *ngIf="showImg" [src]="imgPath" />
+  </div>
+</div>
