@@ -13,7 +13,8 @@ import * as tmImage from '@teachablemachine/image';
   styleUrls: ['./entrada-video.component.scss'],
 })
 export class EntradaVideoComponent implements OnInit {
-  url = 'https://teachablemachine.withgoogle.com/models/inkU1DgEq/';
+  url = 'https://teachablemachine.withgoogle.com/models/_2Zj_PRjb/';
+  // url = 'https://teachablemachine.withgoogle.com/models/inkU1DgEq/';
   // url = 'https://teachablemachine.withgoogle.com/models/ZFXy1A5S9/';
   model;
   predictions;
